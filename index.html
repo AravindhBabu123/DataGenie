@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataGenie: The Future of Business Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Color Palette: Brilliant Blues -->
+    <!-- Narrative Plan: Section 1: Introduction (Mission/Value). Section 2: Core Features (The "How"). Section 3: Market Landscape. Section 4: Competitive Advantage. Section 5: The Target Opportunity. Section 6: Path Forward. -->
+    <!-- Visualization Plan: 
+        - Mission: Donut Chart (Chart.js) to show shift from viewing to acting. Goal: Inform. Justification: Simple, high-impact visual for a core concept.
+        - Core Features: Flow Diagram (HTML/CSS) to show process from insight to action. Goal: Organize. Justification: Visually connects product features into a value-delivery process. NO SVG/Mermaid.
+        - Market Landscape: Venn Diagram (HTML/CSS) to show market intersection. Goal: Organize. Justification: Classic visualization for showing how different fields overlap. NO SVG.
+        - Competitive Advantage: Radar Chart (Chart.js) to compare platforms. Goal: Compare. Justification: Effectively compares multiple entities across several variables.
+        - Target Opportunity: Stacked Bar Chart (Chart.js) to show user base composition. Goal: Compare. Justification: Dramatically highlights the size of the "Citizen Analyst" market.
+        - Path Forward: List (HTML/CSS) for clarity. Goal: Organize. Justification: Simple and direct for outlining a plan. NO SVG.
+    -->
+    <!-- Confirmation: NEITHER Mermaid JS NOR SVG were used in this file. All diagrams are built with HTML/CSS and all charts are rendered on Canvas by Chart.js. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .venn-circle {
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 600;
+            color: #D6F1FF;
+            position: absolute;
+            opacity: 0.8;
+            border: 3px solid #D6F1FF;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#003F5C] mb-2">DataGenie</h1>
+            <p class="text-xl md:text-2xl text-[#366986]">Unlocking Actionable Insights for Everyone</p>
+        </header>
+
+        <main class="space-y-12">
+            <section id="mission" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#003F5C] text-center mb-6">The Mission: From Viewing Data to Acting On It</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-lg text-gray-700 leading-relaxed">
+                        <p class="mb-4">The core mission is to empower every member of an organization to make smarter, data-driven decisions. We're shifting the paradigm from passive data consumption to active, intelligent action.</p>
+                        <p class="font-semibold text-[#003F5C]">Instead of waiting for analysts, DataGenie acts like a dedicated data expert for every user, turning data from a complex resource into a decisive advantage.</p>
+                    </div>
+                    <div>
+                         <div class="chart-container h-64 md:h-80">
+                            <canvas id="missionChart"></canvas>
+                        </div>
+                        <p class="text-center text-sm text-gray-500 mt-2">DataGenie focuses company resources on Actionable Intelligence.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features">
+                 <h2 class="text-2xl md:text-3xl font-bold text-[#003F5C] text-center mb-8">How DataGenie Delivers Value</h2>
+                 <div class="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4 p-4">
+                     <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-[#A1C3DA] -translate-y-1/2 z-0"></div>
+                     <div class="w-full md:w-1/3 bg-white rounded-lg shadow-lg p-6 z-10 border-t-4 border-[#366986]">
+                        <h3 class="text-xl font-bold text-[#003F5C] mb-2 flex items-center"><span class="text-3xl mr-3">💡</span>Autonomous Insights</h3>
+                        <p class="text-gray-600">Proactively monitors data to surface critical changes and trends—the "unknown unknowns" you weren't even looking for.</p>
+                     </div>
+                      <div class="w-full md:w-1/3 bg-white rounded-lg shadow-lg p-6 z-10 border-t-4 border-[#6B95B0]">
+                        <h3 class="text-xl font-bold text-[#003F5C] mb-2 flex items-center"><span class="text-3xl mr-3">🗣️</span>Genie+ Interaction</h3>
+                        <p class="text-gray-600">Lets any user ask complex questions in simple English, removing the technical barrier and democratizing data access.</p>
+                     </div>
+                      <div class="w-full md:w-1/3 bg-white rounded-lg shadow-lg p-6 z-10 border-t-4 border-[#A1C3DA]">
+                        <h3 class="text-xl font-bold text-[#003F5C] mb-2 flex items-center"><span class="text-3xl mr-3">🚀</span>Next Best Action</h3>
+                        <p class="text-gray-600">Provides AI-driven recommendations, closing the loop between analysis and execution for impactful business outcomes.</p>
+                     </div>
+                 </div>
+            </section>
+
+            <section id="landscape" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#003F5C] text-center mb-6">The Competitive Landscape</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="relative w-full h-80 md:h-96">
+                        <div class="venn-circle w-48 h-48 md:w-56 md:h-56 bg-[#003F5C] top-0 left-1/2 -translate-x-1/2 p-4">Traditional BI<br><span class="text-xs font-normal">(Tableau, Power BI)</span></div>
+                        <div class="venn-circle w-48 h-48 md:w-56 md:h-56 bg-[#366986] bottom-0 left-1/4 -translate-x-1/2 p-4">Advanced AI/ML<br><span class="text-xs font-normal">(Palantir, Alteryx)</span></div>
+                        <div class="venn-circle w-48 h-48 md:w-56 md:h-56 bg-[#6B95B0] bottom-0 right-1/4 translate-x-1/2 p-4">Niche Analytics<br><span class="text-xs font-normal">(Google Analytics)</span></div>
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-center">
+                             <div class="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full flex items-center justify-center shadow-2xl">
+                                <span class="text-xl md:text-2xl font-extrabold text-[#003F5C]">DataGenie</span>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="text-lg text-gray-700 leading-relaxed">
+                        <p class="mb-4">DataGenie doesn't just compete in one market; it creates a new one. It operates at the intersection of three key areas, combining their strengths into a single, user-friendly platform.</p>
+                        <p class="font-semibold text-[#003F5C]">It brings the power of advanced AI to the business user, with the simplicity of modern analytics tools, providing a holistic view that niche products lack.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="advantage" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#003F5C] text-center mb-6">DataGenie's Unique Advantage</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="chart-container">
+                            <canvas id="advantageChart"></canvas>
+                        </div>
+                    </div>
+                     <div class="text-lg text-gray-700 leading-relaxed">
+                        <p class="mb-4">Compared to legacy systems, DataGenie excels by focusing on the user. It delivers proactive and actionable insights, not just static dashboards.</p>
+                        <ul class="list-disc list-inside space-y-2 text-[#003F5C]">
+                            <li><span class="font-semibold">High Accessibility:</span> No code or SQL required.</li>
+                            <li><span class="font-semibold">Proactive Intelligence:</span> Insights find you.</li>
+                            <li><span class="font-semibold">Action-Oriented:</span> Clear guidance on what to do next.</li>
+                            <li><span class="font-semibold">Holistic View:</span> Connects data across the entire business.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="opportunity" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#003F5C] text-center mb-6">The Opportunity: The Rise of the Citizen Analyst</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-lg text-gray-700 leading-relaxed">
+                       <p class="mb-4">The market is shifting. The biggest opportunity is not with the small percentage of data scientists, but with the vast majority of business users who need data to do their jobs effectively.</p>
+                       <p class="font-semibold text-[#003F5C]">DataGenie is perfectly positioned to capture this market by empowering these "Citizen Analysts" with tools that are intelligent, accessible, and action-oriented.</p>
+                    </div>
+                    <div>
+                        <div class="chart-container">
+                             <canvas id="opportunityChart"></canvas>
+                        </div>
+                        <p class="text-center text-sm text-gray-500 mt-2">Distribution of data users within a typical enterprise.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="next-steps" class="text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#003F5C] mb-6">The Path Forward</h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <p class="text-5xl mb-2">1.</p>
+                        <h3 class="text-xl font-bold text-[#366986] mb-2">Deep Dive into Product</h3>
+                        <p class="text-gray-600">Gain hands-on experience with the platform to understand its full capabilities.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <p class="text-5xl mb-2">2.</p>
+                        <h3 class="text-xl font-bold text-[#6B95B0] mb-2">Understand the Customer</h3>
+                        <p class="text-gray-600">Talk to users to learn their key challenges and validate the value proposition.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <p class="text-5xl mb-2">3.</p>
+                        <h3 class="text-xl font-bold text-[#A1C3DA] mb-2">Refine Market Position</h3>
+                        <p class="text-gray-600">Use insights to sharpen messaging and strategic go-to-market plans.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 py-6 border-t border-gray-300">
+            <p class="text-gray-500">DataGenie Infographic | Prepared by Aravindh</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const brilliantBlues = ['#003F5C', '#366986', '#6B95B0', '#A1C3DA', '#D6F1FF'];
+
+        const processLabels = (labels) => {
+            const maxLen = 16;
+            return labels.map(label => {
+                if (label.length <= maxLen) {
+                    return label;
+                }
+                const words = label.split(' ');
+                let currentLine = '';
+                const lines = [];
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxLen) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            });
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const commonTooltipOptions = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            }
+        };
+
+        const missionCtx = document.getElementById('missionChart').getContext('2d');
+        new Chart(missionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Actionable Intelligence', 'Passive Data Viewing'],
+                datasets: [{
+                    label: 'Focus',
+                    data: [85, 15],
+                    backgroundColor: [brilliantBlues[0], brilliantBlues[3]],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    tooltip: commonTooltipOptions.plugins.tooltip
+                },
+                cutout: '60%'
+            }
+        });
+
+        const advantageCtx = document.getElementById('advantageChart').getContext('2d');
+        new Chart(advantageCtx, {
+            type: 'radar',
+            data: {
+                labels: processLabels(['Accessibility (No-Code)', 'Proactive Intelligence', 'Action-Oriented', 'Holistic Business View', 'Low Technical Overhead']),
+                datasets: [
+                {
+                    label: 'DataGenie',
+                    data: [9, 9, 8, 8, 10],
+                    fill: true,
+                    backgroundColor: 'rgba(54, 105, 134, 0.2)',
+                    borderColor: brilliantBlues[1],
+                    pointBackgroundColor: brilliantBlues[1],
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: brilliantBlues[1]
+                }, {
+                    label: 'Traditional BI',
+                    data: [4, 2, 3, 7, 5],
+                    fill: true,
+                    backgroundColor: 'rgba(161, 195, 218, 0.2)',
+                    borderColor: brilliantBlues[3],
+                    pointBackgroundColor: brilliantBlues[3],
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: brilliantBlues[3]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                   tooltip: commonTooltipOptions.plugins.tooltip,
+                   legend: {
+                       position: 'bottom'
+                   }
+                },
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: '#E2E8F0'
+                        },
+                        grid: {
+                            color: '#E2E8F0'
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 12
+                            },
+                             color: '#4A5568'
+                        },
+                        ticks: {
+                            backdropColor: 'transparent',
+                            stepSize: 2
+                        },
+                        min: 0,
+                        max: 10
+                    }
+                }
+            }
+        });
+
+        const opportunityCtx = document.getElementById('opportunityChart').getContext('2d');
+        new Chart(opportunityCtx, {
+            type: 'bar',
+            data: {
+                labels: ['User Distribution'],
+                datasets: [
+                    {
+                        label: 'Business Users (Citizen Analysts)',
+                        data: [80],
+                        backgroundColor: brilliantBlues[0],
+                    },
+                    {
+                        label: 'Data Analysts',
+                        data: [15],
+                        backgroundColor: brilliantBlues[2],
+                    },
+                    {
+                        label: 'Data Scientists',
+                        data: [5],
+                        backgroundColor: brilliantBlues[3],
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                           title: () => '' 
+                        }
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%'
+                            }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        stacked: true,
+                         grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
